@@ -14,7 +14,7 @@ class Clock extends Component{
         console.log(this.timerIDTracker);
     }
 
-    componentWillUnmount(){
+    componentWillUnmount(){ // When this is removed from the DOM, it will kill off the Interval function
         clearInterval(this.timerIDTracker);
     }
 
