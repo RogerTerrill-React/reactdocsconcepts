@@ -23,5 +23,8 @@ import './index.css';
 // import FlavorForm from './FlavorForm';
 // ReactDOM.render(<FlavorForm />, document.getElementById('root'));
 
-import Reservation from './Reservation';
-ReactDOM.render(<Reservation />, document.getElementById('root'));
+// import Reservation from './Reservation';
+// ReactDOM.render(<Reservation />, document.getElementById('root'));
+
+import Calculator from './Calculator';
+ReactDOM.render( <Calculator />, document.getElementById('root'));
