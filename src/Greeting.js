@@ -8,6 +8,22 @@ const GuestGreeting = () => {
     return <h1>Please sign up</h1>
 }
 
+const LoginButton = (props) => {
+    return (
+        <button onClick={props.onClick}>
+            Login
+        </button>
+    );
+}
+
+const LogoutButton = (props) => {
+    return (
+        <button onClick={props.onClick}>
+            Logout
+        </button>
+    );
+}
+
 class Greeting extends Component {
     render(){
         const isLoggedIn = this.props.isLoggedIn;
@@ -16,7 +32,6 @@ class Greeting extends Component {
         }
         return <GuestGreeting />
     }
-    
 }
 
 export default Greeting;
