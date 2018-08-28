@@ -17,5 +17,8 @@ import './index.css';
 // import NameForm from './NameForm';
 // ReactDOM.render(<NameForm />, document.getElementById('root'));
 
-import EssayForm from './EssayForm';
-ReactDOM.render(<EssayForm />, document.getElementById('root'));
+// import EssayForm from './EssayForm';
+// ReactDOM.render(<EssayForm />, document.getElementById('root'));
+
+import FlavorForm from './FlavorForm';
+ReactDOM.render(<FlavorForm />, document.getElementById('root'));
