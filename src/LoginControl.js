@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import Greeting from './Greeting';
 
-class LoginControl extends React.Component {
+class LoginControl extends Component {
     constructor(props) {
       super(props);
       this.handleLoginClick = this.handleLoginClick.bind(this);
