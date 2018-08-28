@@ -1,42 +1,57 @@
 import React, {Component} from 'react'
-import LogoutButton from './Greeting';
-import LoginButton from './Greeting';
 import Greeting from './Greeting';
 
-
-class LoginControl extends Component {
+class LoginControl extends React.Component {
     constructor(props) {
-        super(props);
-        this.handleLoginClick = this.handleLoginClick.bind(this);
-        this.handleLogoutClick = this.handleLogoutClick.bind(this);
-        this.state = {isLoggedIn: false};
+      super(props);
+      this.handleLoginClick = this.handleLoginClick.bind(this);
+      this.handleLogoutClick = this.handleLogoutClick.bind(this);
+      this.state = {isLoggedIn: false};
     }
-
+  
     handleLoginClick() {
-        this.setState({isLoggedIn: true});
+      this.setState({isLoggedIn: true});
     }
-
+  
     handleLogoutClick() {
-        this.setState({isLoggedIn: false});
+      this.setState({isLoggedIn: false});
     }
-
-    render(){
-        const isLoggedIn = this.state.isLoggedIn;
-        let button;
-
-        if(isLoggedIn) {
-            button = <LogoutButton onClick={this.handleLogoutClick} />
-        } else {
-            button = <LoginButton onClick={this.handleLoginClick} />
-        }
-
-        return (
-            <div>
-                <Greeting isLoggedIn={isLoggedIn} />
-                {button}
-            </div>
-        );
+  
+    render() {
+      const isLoggedIn = this.state.isLoggedIn;
+      let button;
+  
+      if (isLoggedIn) {
+        button = <LogoutButton onClick={this.handleLogoutClick} />;
+      } else {
+        button = <LoginButton onClick={this.handleLoginClick} />;
+      }
+  
+      return (
+        <div>
+          <Greeting isLoggedIn={this.state.isLoggedIn} />
+          {button}
+        </div>
+      );
     }
-}
+  }
+  
 
-export default LoginControl;
+  
+  function LoginButton(props) {
+    return (
+      <button onClick={props.onClick}>
+        Login
+      </button>
+    );
+  }
+  
+  function LogoutButton(props) {
+    return (
+      <button onClick={props.onClick}>
+        Logout
+      </button>
+    );
+  }
+
+  export default LoginControl;
