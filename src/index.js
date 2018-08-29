@@ -28,3 +28,6 @@ import './index.css';
 
 import Calculator from './Calculator';
 ReactDOM.render( <Calculator />, document.getElementById('root'));
+
+// import TemperatureInput from './TemperatureInput';
+// ReactDOM.render( <TemperatureInput />, document.getElementById('root'));
